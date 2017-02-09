@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="euc-kr">
+    <title>영어 번역</title>
+    <style>
+      BODY {width : 290px; min-height:250px;}
+      .box {width:280px; min-height:500px; border:1px solid #000}
+      .searchbar {resize: none; margin: 10px}
+      .searchbutton {margin-left: 4px}
+      .sort {margin-left : 10px}
+      .searchresult {height: 6px;margin-left:12px;padding-bottom:8px;margin-top: -3px;font-weight: bold}
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="box">
+      <div>
+        <input id="txt_search" type="text" class="searchbar" name="wordcount">
+        <input id="btn_search" class="searchbutton" type="button" value="검색하기">
+      </div>
+      <div id="content" class="searchresult">
+      </div>
+      <hr>
+      <div class="sort">
+        <input type="button" value="순서대로">
+        <input type="button" value="많이 나온 순">
+        <input type="button" value="적게 나온 순">
+      </div>
+      <hr>
+      <div id = "list">
+
+      </div>
+    </div>
+  </body>
+</html>
