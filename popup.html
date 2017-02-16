@@ -2,35 +2,48 @@
 <html>
   <head>
     <meta charset="euc-kr">
-    <title>영어 번역</title>
+    <title>���� ����</title>
+    <link rel="stylesheet" type="text/css" href="wordlist.css">
     <style>
       BODY {width : 290px; min-height:250px;}
       .box {width:280px; min-height:500px; border:1px solid #000}
       .searchbar {resize: none; margin: 10px}
       .searchbutton {margin-left: 4px}
       .sort {margin-left : 10px}
-      .searchresult {height: 6px;margin-left:12px;padding-bottom:8px;margin-top: -3px;font-weight: bold}
+      .searchresult {margin-left:12px;font-weight: bold;}
+      #word_list{height: 500px; overflow: scroll;}
     </style>
+    <script src="wordlist.js"></script>
     <script src="popup.js"></script>
   </head>
   <body>
     <div class="box">
       <div>
         <input id="txt_search" type="text" class="searchbar" name="wordcount">
-        <input id="btn_search" class="searchbutton" type="button" value="검색하기">
+        <input id="btn_search" class="searchbutton" type="button" value="�˻�">
       </div>
-      <div id="content" class="searchresult">
+      <div class="searchresult">
+        <p id="content" style="margin:-5px 0 5px 0"></p>
       </div>
+      <!--
       <hr>
       <div class="sort">
-        <input type="button" value="순서대로">
-        <input type="button" value="많이 나온 순">
-        <input type="button" value="적게 나온 순">
+        <input type="button" value="��������">
+        <input type="button" value="���� ���� ��">
+        <input type="button" value="���� ���� ��">
       </div>
-      <hr>
+    -->
       <div id = "list">
-
+        <ul id="word_list" class="word_list">
+    			<li>
+    				<dl>
+    					<a href="#"><dt class="word"></dt></a>
+    					<dd class="mean"></dd>
+    				</dl>
+    			</li>
+    		</ul>
       </div>
     </div>
+
   </body>
 </html>
